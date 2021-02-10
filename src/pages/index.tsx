@@ -1,34 +1,23 @@
 import { GetStaticProps } from 'next';
 
+import { getAllPosts } from '../data/posts/get-all-posts';
 import { PostData } from '../domain/posts/post';
 
-const getPosts = async (): Promise<PostData[]> => {
-  const posts = await fetch(
-    'https://protected-eyrie-31544.herokuapp.com/posts',
-  );
-  const jsonPosts = await posts.json();
-  return jsonPosts;
-};
+import HomePage from '../containers/HomePage';
 
 type HomeProps = {
   posts: PostData[];
 };
 
-export default function Home({ posts }: HomeProps) {
-  return (
-    <div>
-      {posts.map((post) => (
-        <h2 key={post.slug}>{post.title}</h2>
-      ))}
-    </div>
-  );
-}
-
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts();
+  const posts = await getAllPosts();
 
   return {
     props: { posts },
     // revalidate: 5,
   };
 };
+
+const Home = ({ posts }: HomeProps) => <HomePage posts={posts} />;
+
+export default Home;
