@@ -20,7 +20,7 @@ export const PostCardCover = styled.div`
     width: 100%;
     height: 20rem;
     border-radius: 0.4rem;
-    box-shadow: 0.5rem 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.2);
   }
 `;
 

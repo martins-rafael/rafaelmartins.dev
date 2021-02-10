@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import { Container } from './styles';
 import MainContainer from '../../components/MainContainer';
 import PostCard from '../../components/PostCard';
+import { Footer } from '../../components/Footer';
 
 type HomePageProps = {
   posts: PostData[];
@@ -12,6 +13,7 @@ type HomePageProps = {
 const HomePage = ({ posts }: HomePageProps) => (
   <>
     <Header />
+
     <MainContainer>
       <Container>
         {posts.map((post) => (
@@ -24,6 +26,8 @@ const HomePage = ({ posts }: HomePageProps) => (
         ))}
       </Container>
     </MainContainer>
+
+    <Footer />
   </>
 );
 
