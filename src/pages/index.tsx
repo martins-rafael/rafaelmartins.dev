@@ -10,7 +10,7 @@ type HomeProps = {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts('_sort=id:desc&_start=0&_limit=30');
 
   return {
     props: { posts },
