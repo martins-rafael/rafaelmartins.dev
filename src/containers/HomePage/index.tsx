@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import { Container } from './styles';
 import MainContainer from '../../components/MainContainer';
 import PostCard from '../../components/PostCard';
-import { Footer } from '../../components/Footer';
+import Footer from '../../components/Footer';
 
 type HomePageProps = {
   posts: PostData[];

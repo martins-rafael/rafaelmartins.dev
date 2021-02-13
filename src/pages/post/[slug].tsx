@@ -5,6 +5,8 @@ import { countAllPosts } from '../../data/posts/count-all-posts';
 import { getAllPosts } from '../../data/posts/get-all-posts';
 import { getPost } from '../../data/posts/get-post';
 
+import Post from '../../containers/Post';
+
 type DynamicPostProps = {
   post: PostData;
 };
@@ -36,8 +38,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const DynamicPost = ({ post }: DynamicPostProps) => (
   <>
-    <p>{post.title}</p>
-    <p dangerouslySetInnerHTML={{ __html: post.content }} />
+    <Post post={post} />
   </>
 );
 
