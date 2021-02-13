@@ -34,6 +34,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const DynamicPost = ({ post }: DynamicPostProps) => <p>{post.title}</p>;
+const DynamicPost = ({ post }: DynamicPostProps) => (
+  <>
+    <p>{post.title}</p>
+    <p dangerouslySetInnerHTML={{ __html: post.content }} />
+  </>
+);
 
 export default DynamicPost;
