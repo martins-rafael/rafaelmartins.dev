@@ -12,7 +12,7 @@ const Comments = ({ slug, title }: CommentsProps) => (
       shortname="rdcm-blog"
       config={{
         url: `/post/${slug}`,
-        identifier: 'slug',
+        identifier: slug,
         title: title,
         language: 'pt_BR',
       }}
