@@ -11,7 +11,7 @@ const Comments = ({ slug, title }: CommentsProps) => (
     <DiscussionEmbed
       shortname="rdcm-blog"
       config={{
-        url: `/posts/${slug}`,
+        url: `/post/${slug}`,
         identifier: 'slug',
         title: title,
         language: 'pt_BR',
