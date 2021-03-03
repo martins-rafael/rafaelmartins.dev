@@ -1,4 +1,8 @@
+import Head from 'next/head';
+
 import { PostData } from '../../domain/posts/post';
+import { SITE_NAME } from '../../config/app-config';
+import { removeHtml } from '../../utils/remove-html';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -15,6 +19,16 @@ type PostProps = {
 
 const Post = ({ post }: PostProps) => (
   <>
+    <Head>
+      <title>
+        {post.title} | {SITE_NAME} Blog
+      </title>
+
+      <meta
+        name="description"
+        content={removeHtml(post.content).slice(0, 150)}
+      />
+    </Head>
     <Header />
 
     <MainContainer>
