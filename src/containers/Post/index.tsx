@@ -13,6 +13,8 @@ import PostDetails from '../../components/PostDetails';
 import PostContainer from '../../components/PostContainer';
 import Comments from '../../components/Comments';
 
+import { Container } from './styles';
+
 type PostProps = {
   post: PostData;
 };
@@ -29,22 +31,20 @@ const Post = ({ post }: PostProps) => (
         content={removeHtml(post.content).slice(0, 150)}
       />
     </Head>
+
     <Header />
-
     <MainContainer>
-      <Heading>{post.title}</Heading>
-
       <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
 
-      <PostDetails
-        author={post.author.name}
-        category={post.category.name}
-        date={post.created_at}
-      />
+      <Container>
+        <Heading>{post.title}</Heading>
 
-      <PostContainer content={post.content} />
+        <PostDetails category={post.category.name} date={post.created_at} />
 
-      <Comments slug={post.slug} title={post.title} />
+        <PostContainer content={post.content} />
+
+        <Comments slug={post.slug} title={post.title} />
+      </Container>
     </MainContainer>
 
     <Footer />

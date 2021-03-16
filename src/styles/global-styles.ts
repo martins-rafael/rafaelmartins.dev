@@ -18,8 +18,8 @@ export const GlobalStyles = createGlobalStyle`
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif;
       font-size: ${theme.font.sizes.medium};
-      color: ${theme.colors.darkGray};
-      background: ${theme.colors.white};
+      color: ${theme.colors.text};
+      background: ${theme.colors.background};
     `}
 
     #__next {
@@ -30,12 +30,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
+    display: inline-block;
     text-decoration: none;
     color: ${({ theme }) => theme.colors.purple};
     transition: opacity 300ms ease-in-out;
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.7;
     }
   }
 `;

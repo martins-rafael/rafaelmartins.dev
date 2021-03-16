@@ -3,13 +3,12 @@ import { Container } from './styles';
 
 type PostDetailsProps = {
   date: string;
-  author: string;
   category: string;
 };
 
-const PostDetails = ({ date, author, category }: PostDetailsProps) => (
+const PostDetails = ({ date, category }: PostDetailsProps) => (
   <Container>
-    Publicado em <Date date={date} /> por {author} | {category}
+    Publicado em <Date date={date} /> | <strong>{category}</strong>
   </Container>
 );
 

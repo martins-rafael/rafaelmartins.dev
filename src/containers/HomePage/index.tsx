@@ -23,18 +23,12 @@ const HomePage = ({ posts }: HomePageProps) => (
         content="Desenvolvimento web, tecnologia e afins."
       />
     </Head>
-
     <Header />
 
     <MainContainer>
       <Container>
         {posts.map((post) => (
-          <PostCard
-            key={post.id}
-            slug={post.slug}
-            title={post.title}
-            cover={post.cover.formats.small.url}
-          />
+          <PostCard key={post.id} post={post} />
         ))}
       </Container>
     </MainContainer>
