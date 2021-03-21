@@ -14,41 +14,57 @@ import PostContainer from '../../components/PostContainer';
 import Comments from '../../components/Comments';
 
 import { Container } from './styles';
+import { useEffect } from 'react';
 
 type PostProps = {
   post: PostData;
 };
 
-const Post = ({ post }: PostProps) => (
-  <>
-    <Head>
-      <title>
-        {post.title} | {SITE_NAME} Blog
-      </title>
+const Post = ({ post }: PostProps) => {
+  useEffect(() => {
+    // eslint-disable-next-line prefer-const
+    let removeAds = null;
+    if (typeof window !== 'undefined') {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      removeAds = setTimeout(() => {
+        document
+          .querySelectorAll('iframe[src*=ads]')
+          .forEach((iframe) => iframe.remove());
+      }, 1000);
+    }
+  }, []);
 
-      <meta
-        name="description"
-        content={removeHtml(post.content).slice(0, 150)}
-      />
-    </Head>
+  return (
+    <>
+      <Head>
+        <title>
+          {post.title} | {SITE_NAME} Blog
+        </title>
 
-    <Header />
-    <MainContainer>
-      <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
+        <meta
+          name="description"
+          content={removeHtml(post.content).slice(0, 150)}
+        />
+      </Head>
 
-      <Container>
-        <Heading>{post.title}</Heading>
+      <Header />
+      <MainContainer>
+        <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
 
-        <PostDetails category={post.category.name} date={post.created_at} />
+        <Container>
+          <Heading>{post.title}</Heading>
 
-        <PostContainer content={post.content} />
+          <PostDetails category={post.category.name} date={post.created_at} />
 
-        <Comments slug={post.slug} title={post.title} />
-      </Container>
-    </MainContainer>
+          <PostContainer content={post.content} />
 
-    <Footer />
-  </>
-);
+          <Comments slug={post.slug} title={post.title} />
+        </Container>
+      </MainContainer>
+
+      <Footer />
+    </>
+  );
+};
 
 export default Post;

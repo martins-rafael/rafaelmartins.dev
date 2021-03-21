@@ -5,6 +5,10 @@ export const Container = styled.div`
   grid-template-columns: 28rem 1fr;
   gap: 2.4rem;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   a {
     &:last-child {
       margin: ${({ theme }) => theme.spacings.small} 0;

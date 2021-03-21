@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.main`
   ${({ theme }) => css`
     margin: -10rem auto 4rem;
+    width: 100%;
     max-width: 96rem;
     font-size: ${theme.font.sizes.medium};
     background: ${theme.colors.background};
