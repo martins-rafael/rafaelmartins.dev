@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -13,30 +13,18 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    ${({ theme }) => css`
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-        sans-serif;
-      font-size: ${theme.font.sizes.medium};
-      color: ${theme.colors.text};
-      background: ${theme.colors.background};
-    `}
-
-    #__next {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: ${({ theme }) => theme.font.sizes.medium}
   }
 
   a {
     display: inline-block;
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.secondary};
     transition: opacity 300ms ease-in-out;
 
     &:hover {
-      opacity: 0.7;
+      opacity: .6;
     }
   }
 `;
