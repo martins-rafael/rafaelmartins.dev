@@ -13,58 +13,39 @@ import PostDetails from '../../components/PostDetails';
 import PostContainer from '../../components/PostContainer';
 import Comments from '../../components/Comments';
 
-import { Container } from './styles';
-import { useEffect } from 'react';
-
 type PostProps = {
   post: PostData;
 };
 
-const Post = ({ post }: PostProps) => {
-  useEffect(() => {
-    // eslint-disable-next-line prefer-const
-    let removeAds = null;
-    if (typeof window !== 'undefined') {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      removeAds = setTimeout(() => {
-        document
-          .querySelectorAll('iframe[src*=ads]')
-          .forEach((iframe) => iframe.remove());
-      }, 1000);
-    }
-  }, []);
+const Post = ({ post }: PostProps) => (
+  <>
+    <Head>
+      <title>
+        {post.title} | {SITE_NAME} Blog
+      </title>
 
-  return (
-    <>
-      <Head>
-        <title>
-          {post.title} | {SITE_NAME} Blog
-        </title>
+      <meta
+        name="description"
+        content={removeHtml(post.content).slice(0, 150)}
+      />
+    </Head>
 
-        <meta
-          name="description"
-          content={removeHtml(post.content).slice(0, 150)}
-        />
-      </Head>
+    <Header />
 
-      <Header />
-      <MainContainer>
-        <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
+    <MainContainer>
+      <Heading>{post.title}</Heading>
 
-        <Container>
-          <Heading>{post.title}</Heading>
+      <PostDetails category={post.category.name} date={post.created_at} />
 
-          <PostDetails category={post.category.name} date={post.created_at} />
+      <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
 
-          <PostContainer content={post.content} />
+      <PostContainer content={post.content} />
 
-          <Comments slug={post.slug} title={post.title} />
-        </Container>
-      </MainContainer>
+      <Comments slug={post.slug} title={post.title} />
+    </MainContainer>
 
-      <Footer />
-    </>
-  );
-};
+    <Footer />
+  </>
+);
 
 export default Post;

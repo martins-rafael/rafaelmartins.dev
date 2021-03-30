@@ -1,36 +1,38 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 28rem 1fr;
-  gap: 2.4rem;
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: 28rem 1fr;
+    gap: ${theme.spacings.medium};
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-
-  a {
-    &:last-child {
-      margin: ${({ theme }) => theme.spacings.small} 0;
-      font-size: 1.4rem;
-      font-style: italic;
-      font-weight: bold;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
-  }
 
-  p {
-    line-height: 1.5;
-  }
+    a {
+      &:last-child {
+        margin: ${theme.spacings.small} 0;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
 
-  & + div {
-    margin-top: ${({ theme }) => theme.spacings.superLarge};
-  }
+    p {
+      line-height: 1.5;
+    }
+
+    & + div {
+      margin-top: ${theme.spacings.superLarge};
+    }
+  `}
 `;
 
 export const PostCardCover = styled.div`
   margin-bottom: ${({ theme }) => theme.spacings.small};
   min-width: 28rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   overflow: hidden;
 
   img {
@@ -48,6 +50,13 @@ export const PostCardCover = styled.div`
 `;
 
 export const PostCardHeading = styled.h2`
-  font-size: ${({ theme }) => theme.font.sizes.large};
-  color: ${({ theme }) => theme.colors.text};
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.large};
+    color: ${theme.colors.title};
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: ${theme.colors.green};
+    }
+  `}
 `;

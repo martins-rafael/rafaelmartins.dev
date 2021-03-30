@@ -1,9 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const Container = styled.img`
-  ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.medium};
-    max-width: 100%;
-    border-radius: 1rem 1rem 0 0;
-  `}
+export const Container = styled.div`
+  margin: ${({ theme }) => theme.spacings.superLarge} 0;
 `;

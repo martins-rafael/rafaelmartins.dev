@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { removeHtml } from '../../utils/remove-html';
 
 import PostDetails from '../PostDetails';
@@ -25,13 +26,19 @@ type PostCardProps = {
 
 const PostCard = ({ post }: PostCardProps) => {
   const postContent = `${removeHtml(post.content)
-    .slice(0, 220)
+    .slice(0, 200)
     .replace(/#/g, '')}... `;
 
   return (
     <Container>
       <PostCardCover>
-        <img src={post.cover.formats.small.url} alt={post.title} />
+        <Image
+          src={post.cover.formats.small.url}
+          alt={post.title}
+          width={280}
+          height={200}
+          layout="responsive"
+        />
       </PostCardCover>
 
       <div>

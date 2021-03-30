@@ -6,5 +6,9 @@ export const Container = styled.div`
     font-size: ${theme.font.sizes.small};
     font-style: italic;
     color: ${theme.colors.gray};
+
+    strong {
+      color: ${theme.colors.purple};
+    }
   `}
 `;
