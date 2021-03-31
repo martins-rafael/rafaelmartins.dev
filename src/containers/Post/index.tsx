@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 
 import { PostData } from '../../domain/posts/post';
 import { SITE_NAME } from '../../config/app-config';
@@ -19,20 +18,6 @@ type PostProps = {
 };
 
 const Post = ({ post }: PostProps) => {
-  useEffect(() => {
-    // eslint-disable-next-line prefer-const
-    let removeAds = null;
-
-    if (typeof window !== 'undefined') {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      removeAds = setTimeout(() => {
-        document
-          .querySelectorAll('iframe[src*=ads]')
-          .forEach((iframe) => iframe.remove());
-      }, 1000);
-    }
-  }, []);
-
   return (
     <>
       <Head>
