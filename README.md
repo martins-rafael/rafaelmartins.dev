@@ -1,4 +1,4 @@
-# {RafaMartins} Blog
+# RafaMartins Blog
 
 <p>
   <img src="https://img.shields.io/badge/author-RAFAEL%20MARTINS-6E40C9?style=flat-square">
