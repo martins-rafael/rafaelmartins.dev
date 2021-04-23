@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: 28rem 1fr;
-    gap: ${theme.spacings.medium};
+    grid-template-columns: 25rem 1fr;
+    gap: 1.5rem;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     }
 
     p {
-      line-height: 1.5;
+      line-height: 1.3;
     }
 
     & + div {
@@ -31,16 +31,12 @@ export const Container = styled.div`
 
 export const PostCardCover = styled.div`
   margin-bottom: ${({ theme }) => theme.spacings.small};
-  min-width: 28rem;
   border-radius: 0.3rem;
   overflow: hidden;
 
   img {
-    display: block;
-    width: 100%;
-    height: 20rem;
     object-fit: cover;
-    box-shadow: 0.5rem 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0.5rem 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.4); */
     transition: transform 0.5s ease-in-out;
 
     &:hover {

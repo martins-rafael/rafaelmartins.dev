@@ -5,9 +5,9 @@ export const Container = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto auto ${theme.spacings.medium};
-    padding: 0 ${theme.spacings.medium};
-    max-width: 96rem;
+    margin: auto;
+    padding: 1.6rem;
+    max-width: 80rem;
     font-size: ${theme.font.sizes.medium};
     color: ${theme.colors.gray};
 

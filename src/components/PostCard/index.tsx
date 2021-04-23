@@ -26,7 +26,7 @@ type PostCardProps = {
 
 const PostCard = ({ post }: PostCardProps) => {
   const postContent = `${removeHtml(post.content)
-    .slice(0, 200)
+    .slice(0, 180)
     .replace(/#/g, '')}... `;
 
   return (
