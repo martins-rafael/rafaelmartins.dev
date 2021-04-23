@@ -24,6 +24,11 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.colors.purple};
   }
 
+  ::selection {
+    color: #121214;
+    background: #ccd6f6;
+  }
+
   html {
     font-size: 62.5%;
 

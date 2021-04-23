@@ -7,7 +7,8 @@ export const Container = styled.article`
 
   p {
     margin: ${({ theme }) => theme.spacings.medium} 0;
-    line-height: 1.5;
+    letter-spacing: 0.069rem;
+    line-height: 1.8;
   }
 
   ul,

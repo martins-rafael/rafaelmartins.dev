@@ -14,6 +14,7 @@ export const PrismWrapper = styled.div`
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1.6rem;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -33,6 +34,7 @@ export const PrismWrapper = styled.div`
   pre[class*='language-'] {
     padding: 1em;
     margin: 0.5em 0;
+    border-radius: 0.4rem;
     overflow: auto;
   }
 
