@@ -8,7 +8,7 @@ export const Container = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 4;
   width: 100%;
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -49,7 +49,7 @@ export const HeaderContent = styled.nav`
     }
 
     button {
-      z-index: 2;
+      z-index: 4;
       display: none;
       background: none;
       border: 0;
@@ -67,54 +67,59 @@ export const HeaderContent = styled.nav`
 `;
 
 export const LinksContainer = styled.ul<LinksContainerProps>`
-  list-style: none;
-  display: flex;
+  ${({ theme, active }) => css`
+    list-style: none;
+    display: flex;
 
-  li + li {
-    margin-left: ${({ theme }) => theme.spacings.medium};
-  }
-
-  a {
-    position: relative;
-
-    &:hover {
-      opacity: initial;
+    li + li {
+      margin-left: ${theme.spacings.medium};
     }
 
-    &::after {
+    a {
+      position: relative;
+
+      &:hover {
+        opacity: initial;
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: ${theme.colors.green};
+      }
+
+      &:hover::after {
+        width: 100%;
+        transition: width 0.7s ease-in-out;
+      }
+    }
+
+    @media (max-width: 768px) {
       position: absolute;
+      top: 0;
       left: 0;
-      bottom: -8px;
-      content: '';
-      width: 0;
-      height: 2px;
-      background-color: ${({ theme }) => theme.colors.green};
-    }
+      flex-direction: column;
+      justify-content: center;
+      width: 65%;
+      height: 100vh;
+      font-size: ${theme.font.sizes.large};
+      background: ${theme.colors.background};
+      transform: ${active ? 'translateX(0)' : 'translateX(-100%)'};
+      opacity: ${active ? 0.98 : 0};
+      visibility: ${active ? 'visible' : 'hidden'};
+      transition: 0.3s ease-in-out;
 
-    &:hover::after {
-      width: 100%;
-      transition: width 0.7s ease-in-out;
-    }
-  }
+      li {
+        margin: ${theme.spacings.medium} ${theme.spacings.superLarge} !important;
+      }
 
-  @media (max-width: 768px) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    flex-direction: column;
-    justify-content: center;
-    width: 65%;
-    height: 100vh;
-    font-size: ${({ theme }) => theme.font.sizes.large};
-    background: ${({ theme }) => theme.colors.background};
-    transform: ${({ active }) =>
-      active ? 'translateX(0)' : 'translateX(100%)'};
-    opacity: ${({ active }) => (active ? 0.98 : 0)};
-    visibility: ${({ active }) => (active ? 'visible' : 'hidden')};
-    transition: 0.3s ease-in-out;
-
-    li {
-      margin: ${({ theme }) => theme.spacings.medium};
+      a:hover::after {
+        width: 0;
+      }
     }
-  }
+  `}
 `;

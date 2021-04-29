@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.footer`
   ${({ theme }) => css`
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,9 +19,13 @@ export const Container = styled.footer`
     }
 
     a {
-      margin: ${theme.spacings.small};
+      margin: ${theme.spacings.extraSmall};
+      padding: 8px;
       font-weight: 700;
+      line-height: 0;
       color: ${({ theme }) => theme.colors.purple};
+      border: 2px solid #222222;
+      border-radius: 5px;
     }
 
     @media (max-width: 768px) {
