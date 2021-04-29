@@ -50,9 +50,5 @@ export const PostCardHeading = styled.h2`
     font-size: ${theme.font.sizes.large};
     color: ${theme.colors.title};
     transition: color 0.3s ease-in-out;
-
-    &:hover {
-      color: ${theme.colors.green};
-    }
   `}
 `;

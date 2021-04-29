@@ -53,7 +53,7 @@ const PostCard = ({ post }: PostCardProps) => {
         <p>{postContent}</p>
 
         <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-          <a>Ler mais</a>
+          <a>Continue lendo »</a>
         </Link>
       </div>
     </Container>
