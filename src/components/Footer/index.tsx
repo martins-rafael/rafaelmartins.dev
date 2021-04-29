@@ -13,12 +13,7 @@ const Footer = () => (
     </div>
 
     <div>
-      <a
-        title="LinkedIn"
-        href="https://www.linkedin.com/in/rafaeldcmartins/"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
+      <a title="Email" href="mailto:rafaeldcmartins@gmail.com">
         <FiMail size={16} />
       </a>
 
