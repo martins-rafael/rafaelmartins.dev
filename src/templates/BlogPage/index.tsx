@@ -10,14 +10,14 @@ import Footer from '../../components/Footer';
 
 import { Container } from './styles';
 
-type HomePageProps = {
+type BlogPageProps = {
   posts: PostData[];
 };
 
-const HomePage = ({ posts }: HomePageProps) => (
+const BlogPage = ({ posts }: BlogPageProps) => (
   <>
     <Head>
-      <title>{SITE_NAME} Blog</title>
+      <title>Blog | {SITE_NAME}</title>
       <meta
         name="description"
         content="Desenvolvimento web, tecnologia e afins."
@@ -37,4 +37,4 @@ const HomePage = ({ posts }: HomePageProps) => (
   </>
 );
 
-export default HomePage;
+export default BlogPage;

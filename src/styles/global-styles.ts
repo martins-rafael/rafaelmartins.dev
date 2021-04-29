@@ -39,12 +39,20 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     ${({ theme }) => css`
+      height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-size: ${theme.font.sizes.medium};
       color: ${theme.colors.text};
       background: ${theme.colors.background};
     `}
+  }
+
+  #__next {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
