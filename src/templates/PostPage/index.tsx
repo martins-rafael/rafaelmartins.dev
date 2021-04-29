@@ -13,16 +13,16 @@ import PostDetails from '../../components/PostDetails';
 import PostContainer from '../../components/PostContainer';
 import Comments from '../../components/Comments';
 
-type PostProps = {
+type PostPageProps = {
   post: PostData;
 };
 
-const Post = ({ post }: PostProps) => {
+const PostPage = ({ post }: PostPageProps) => {
   return (
     <>
       <Head>
         <title>
-          {post.title} | {SITE_NAME} Blog
+          {post.title} | {SITE_NAME}
         </title>
 
         <meta
@@ -46,4 +46,4 @@ const Post = ({ post }: PostProps) => {
   );
 };
 
-export default Post;
+export default PostPage;
