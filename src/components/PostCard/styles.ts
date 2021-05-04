@@ -6,14 +6,14 @@ export const Container = styled.div`
     grid-template-columns: 25rem 1fr;
     gap: 1.5rem;
 
-    @media (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
       grid-template-columns: 1fr;
     }
 
     a {
       &:last-child {
         margin: ${theme.spacings.small} 0;
-        font-size: 1.4rem;
+        font-size: ${theme.font.sizes.small};
         font-style: italic;
         font-weight: bold;
       }
@@ -36,7 +36,6 @@ export const PostCardCover = styled.div`
 
   img {
     object-fit: cover;
-    /* box-shadow: 0.5rem 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.4); */
     transition: transform 0.5s ease-in-out;
 
     &:hover {
@@ -49,6 +48,5 @@ export const PostCardHeading = styled.h2`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};
     color: ${theme.colors.title};
-    transition: color 0.3s ease-in-out;
   `}
 `;

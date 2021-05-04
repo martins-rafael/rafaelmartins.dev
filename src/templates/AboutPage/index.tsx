@@ -1,9 +1,9 @@
-import BaseTemplate from '../BaseTemplate';
+import AnimationContainer from '../../components/AnimationContainer';
 
 const AboutPage = () => (
-  <BaseTemplate>
+  <AnimationContainer>
     <h1>Sobre</h1>
-  </BaseTemplate>
+  </AnimationContainer>
 );
 
 export default AboutPage;

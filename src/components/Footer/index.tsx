@@ -1,5 +1,6 @@
 import { SiGithub } from 'react-icons/si';
 import { SiLinkedin } from 'react-icons/si';
+import { FiMail } from 'react-icons/fi';
 
 import { SITE_NAME } from '../../config/app-config';
 
@@ -12,13 +13,8 @@ const Footer = () => (
     </div>
 
     <div>
-      <a
-        title="GitHub"
-        href="https://github.com/martins-rafael"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <SiGithub size={32} />
+      <a title="Email" href="mailto:rafaeldcmartins@gmail.com">
+        <FiMail size={16} />
       </a>
 
       <a
@@ -27,7 +23,16 @@ const Footer = () => (
         target="_blank"
         rel="noreferrer noopener"
       >
-        <SiLinkedin size={32} />
+        <SiLinkedin size={16} />
+      </a>
+
+      <a
+        title="GitHub"
+        href="https://github.com/martins-rafael"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <SiGithub size={16} />
       </a>
     </div>
   </Container>

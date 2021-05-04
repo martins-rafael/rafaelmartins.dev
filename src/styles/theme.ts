@@ -13,6 +13,8 @@ export const theme = {
     medium: '2rem',
     large: '3rem',
     superLarge: '4rem',
+    container: '80rem',
+    containerLarge: '96rem',
   },
   font: {
     sizes: {
