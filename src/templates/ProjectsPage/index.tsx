@@ -1,9 +1,9 @@
-import BaseTemplate from '../BaseTemplate';
+import AnimationContainer from '../../components/AnimationContainer';
 
 const ProjectsPage = () => (
-  <BaseTemplate>
+  <AnimationContainer>
     <h1>Portfolio</h1>
-  </BaseTemplate>
+  </AnimationContainer>
 );
 
 export default ProjectsPage;

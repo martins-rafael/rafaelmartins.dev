@@ -4,12 +4,10 @@ import { PostData } from '../../domain/posts/post';
 import { SITE_NAME } from '../../config/app-config';
 import { removeHtml } from '../../utils/remove-html';
 
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import MainContainer from '../../components/MainContainer';
+import AnimationContainer from '../../components/AnimationContainer';
 import Heading from '../../components/Heading';
-import PostCover from '../../components/PostCover';
 import PostDetails from '../../components/PostDetails';
+import PostCover from '../../components/PostCover';
 import PostContainer from '../../components/PostContainer';
 import Comments from '../../components/Comments';
 
@@ -31,17 +29,13 @@ const PostPage = ({ post }: PostPageProps) => {
         />
       </Head>
 
-      <Header />
-
-      <MainContainer>
+      <AnimationContainer>
         <Heading>{post.title}</Heading>
         <PostDetails category={post.category.name} date={post.created_at} />
         <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
         <PostContainer content={post.content} />
         <Comments slug={post.slug} title={post.title} />
-      </MainContainer>
-
-      <Footer />
+      </AnimationContainer>
     </>
   );
 };

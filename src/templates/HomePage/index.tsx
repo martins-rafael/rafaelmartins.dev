@@ -2,8 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { SITE_NAME } from '../../config/app-config';
-import BaseTemplate from '../BaseTemplate';
+
 import ParticlesBackground from '../../components/ParticlesBackground';
+import AnimationContainer from '../../components/AnimationContainer';
 
 import { Container } from './styles';
 
@@ -17,16 +18,26 @@ const HomePage = () => (
       />
     </Head>
 
-    <BaseTemplate>
-      <ParticlesBackground />
+    <ParticlesBackground />
+
+    <AnimationContainer>
       <Container>
         <div>
-          <span>Olá, eu sou</span>
-          <h1>
-            Rafael <br /> Martins
-          </h1>
+          <span>
+            <Image
+              src="/images/hi.gif"
+              alt="Olá"
+              width={28}
+              height={27}
+              layout="fixed"
+            />{' '}
+            Olá, eu sou
+          </span>
+
+          <h1>Rafael Martins</h1>
+
           <p>
-            Desenvolvedor Frontend <span>&lt; / &gt;</span>
+            Desenvolvedor Frontend <span>&lt;/&gt;</span>
           </p>
         </div>
 
@@ -38,7 +49,7 @@ const HomePage = () => (
           layout="responsive"
         />
       </Container>
-    </BaseTemplate>
+    </AnimationContainer>
   </>
 );
 

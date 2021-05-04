@@ -36,10 +36,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const DynamicPost = ({ post }: DynamicPostProps) => (
-  <>
-    <PostPage post={post} />
-  </>
-);
+const DynamicPost = ({ post }: DynamicPostProps) => <PostPage post={post} />;
 
 export default DynamicPost;
