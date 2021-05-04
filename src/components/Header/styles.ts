@@ -30,7 +30,11 @@ export const HeaderContent = styled.nav`
     justify-content: space-between;
     margin: 0 auto;
     padding: ${theme.spacings.superLarge} ${theme.spacings.medium};
-    max-width: 80rem;
+    max-width: ${theme.spacings.container};
+
+    @media only screen and (min-width: 1440px) {
+      max-width: ${theme.spacings.containerLarge};
+    }
 
     a {
       font-weight: bold;
@@ -43,7 +47,12 @@ export const HeaderContent = styled.nav`
       font-size: 4.8rem;
       font-style: italic;
 
+      &:hover {
+        text-shadow: initial;
+      }
+
       span {
+        text-shadow: 0 0 5px;
         color: ${theme.colors.green};
       }
     }
@@ -54,7 +63,7 @@ export const HeaderContent = styled.nav`
       background: none;
       border: 0;
 
-      @media (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         display: block;
       }
 
@@ -77,10 +86,7 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
 
     a {
       position: relative;
-
-      &:hover {
-        opacity: initial;
-      }
+      transition: text-shadow 1s ease-in-out;
 
       &::after {
         position: absolute;
@@ -90,6 +96,7 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
         width: 0;
         height: 2px;
         background-color: ${theme.colors.green};
+        box-shadow: 0 0 10px ${theme.colors.green};
       }
 
       &:hover::after {
@@ -98,7 +105,7 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
       }
     }
 
-    @media (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
       position: absolute;
       top: 0;
       left: 0;
@@ -118,7 +125,7 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
       }
 
       a:hover::after {
-        width: 0;
+        width: initial;
       }
     }
   `}

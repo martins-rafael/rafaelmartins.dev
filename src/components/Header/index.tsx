@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg';
+
+import { content } from './content';
+
 import { Container, HeaderContent, LinksContainer } from './styles';
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  const handleMenu = () => {
-    setMenuIsOpen(!menuIsOpen);
-  };
+  const handleMenu = () => setMenuIsOpen(!menuIsOpen);
+  const handleLink = () => menuIsOpen && handleMenu();
 
   return (
     <Container>
@@ -24,23 +26,13 @@ const Header = () => {
         </button>
 
         <LinksContainer active={menuIsOpen}>
-          <li>
-            <Link href="/about">
-              <a>Sobre</a>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/projects">
-              <a>Portfólio</a>
-            </Link>
-          </li>
+          {content.map(({ label, url }) => (
+            <li key={label}>
+              <Link href={url}>
+                <a onClick={handleLink}>{label}</a>
+              </Link>
+            </li>
+          ))}
         </LinksContainer>
       </HeaderContent>
     </Container>
