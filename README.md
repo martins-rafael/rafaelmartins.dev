@@ -1,4 +1,4 @@
-# RafaMartins Blog
+# rafaelmartins.dev
 
 <p>
   <img src="https://img.shields.io/badge/author-RAFAEL%20MARTINS-6E40C9?style=flat-square">
@@ -7,54 +7,73 @@
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-6E40C9?style=flat-square">
   </a>
-  <a href="https://github.com/martins-rafael/next-blog/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/martins-rafael/next-blog?color=6E40C9&style=flat-square">
-  </a>
 </p>
 
-## Table of Contents
+## Tópicos
 
-[About](#aboutt)
+[Sobre](#sobre)
 
-[Technologies](#technologies)
+[Funcionalidades](#funcionalidades)
 
-[Getting Started](#getting-started)
+[Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
 
-[License](#license)
+[Instalação e uso](#instalação-e-uso)
+
+[Licença](#licença)
 
 <br>
 
-## About
+## Sobre
 
 <p align="center">
-  <img src=".github/cover.png" alt="Home page">
+  <img src=".github/cover.webp" alt="Home page">
 </p>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), for the purpose of studying the framework.
+Página pessoal com o propósito de servir como blog e portfólio, desenvolvida usando o framework [Next.js](https://nextjs.org/).
 
 <br>
 
-## Technologies
+## Funcionalidades
 
-Technologies and tools used in this project:
+- [X] JAMstack.
+- [X] Design simples, limpo e responsivo.
+- [X] Páginas dinâmicas geradas com Static Site Generation (SSG).
+- [X] Blog integrado.
+- [X] Markdown highlighting.
+- [X] Scroll to top.
+- [X] API do blog gerada com Strapi CMS.
+- [X] Animações de transição entre as páginas e de scroll.
+- [X] Provedor de imagens by Cloudinary.
+- [X] Lazy loading p/ otimizar o desempenho das imagens.
+- [X] Integração com o sistema de comentários Disqus.
+- [X] SEO otimizado.
+
+<br>
+
+## Tecnologias e Ferramentas
+
+As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- [AOS](https://michalsnik.github.io/aos/)
 - [Prism.js](https://prismjs.com/)
 - [remark](https://remark.js.org/)
 - [disqus-react](https://www.npmjs.com/package/disqus-react)
 - [Strapi CMS](https://strapi.io/)
+- [Vercel](https://vercel.com/dashboard)
 - [Heroku](https://www.heroku.com/)
-- [VS Code](https://code.visualstudio.com/) with [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [EditorConfig](https://editorconfig.org/)
+- [Cloudinary](https://cloudinary.com/)
+- [VS Code](https://code.visualstudio.com/) com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [EditorConfig](https://editorconfig.org/)
 
 <br>
 
-## Getting Started
+## Instalação e Uso
 
-Just install dependencies and run the development server:
+Instale as dependências e rode o development server:
 
 ```bash
 yarn install
@@ -62,23 +81,25 @@ yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) em seu navegador para ver o resultado.
 
 <br>
 
 ## Deploy on Vercel
 
-[Click here](https://rafaelmartinsblog.vercel.app/) to see a live preview of this project.
+[Click aqui](rafaelmartins.vercel.app) para ver a live preview deste projeto.
 
-## License
+<br>
+
+## Licença
 
 <a href="https://opensource.org/licenses/MIT">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-6E40C9?style=flat-square">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-6E40C9?style=flat-square">
 </a>
 
 <br>
 
-This projected is licensed under the terms of the [MIT license](/LICENSE).
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
 
 ---
 
