@@ -9,6 +9,7 @@
     "deploy:static": "next build && next export"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "disqus-react": "^1.0.11",
     "next": "10.0.6",
     "prismjs": "^1.23.0",
@@ -21,6 +22,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.3",
     "@types/node": "^14.14.25",
     "@types/prismjs": "^1.16.4",
     "@types/react": "^17.0.1",
