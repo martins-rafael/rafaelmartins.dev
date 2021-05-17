@@ -22,15 +22,16 @@ type PostCardProps = {
       };
     };
   };
+  effect: string;
 };
 
-const PostCard = ({ post }: PostCardProps) => {
+const PostCard = ({ post, effect }: PostCardProps) => {
   const postContent = `${removeHtml(post.content)
     .slice(0, 180)
     .replace(/#/g, '')}... `;
 
   return (
-    <Container>
+    <Container data-aos={effect}>
       <PostCardCover>
         <Image
           src={post.cover.formats.small.url}

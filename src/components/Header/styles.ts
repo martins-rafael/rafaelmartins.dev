@@ -39,6 +39,7 @@ export const HeaderContent = styled.nav`
     a {
       font-weight: bold;
       letter-spacing: 0.069rem;
+      text-transform: uppercase;
       color: ${theme.colors.title};
     }
 
@@ -94,8 +95,9 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
         bottom: -8px;
         content: '';
         width: 0;
-        height: 2px;
+        height: 4px;
         background-color: ${theme.colors.green};
+        border-radius: 2px;
         box-shadow: 0 0 10px ${theme.colors.green};
       }
 

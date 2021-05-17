@@ -2,28 +2,32 @@ import styled from 'styled-components';
 
 export const PrismWrapper = styled.div`
   /**
- * Dracula Theme originally by Zeno Rocha [@zenorocha]
- * https://draculatheme.com/
+ * Omni Theme by Rocketseat [@rocketseat]
+ * A dark theme based on Dracula
  *
- * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ * Ported for PrismJS by Rafael Martins [@martins-rafael]
+ * https://github.com/getomni/omni
  */
 
   code[class*='language-'],
   pre[class*='language-'] {
-    color: #f8f8f2;
+    color: #e1e1e6;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 1.6rem;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Courier New', Courier,
+      'Ubuntu Mono', monospace;
+    font-size: 1.4rem;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
@@ -34,18 +38,19 @@ export const PrismWrapper = styled.div`
   pre[class*='language-'] {
     padding: 1em;
     margin: 0.5em 0;
-    border-radius: 0.4rem;
     overflow: auto;
+    border-radius: 5px;
   }
 
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
-    background: #282a36;
+    background: #191622;
   }
 
   /* Inline code */
   :not(pre) > code[class*='language-'] {
     padding: 0.1em;
+    border-radius: 5px;
     white-space: normal;
   }
 
@@ -53,11 +58,11 @@ export const PrismWrapper = styled.div`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: #6272a4;
+    color: #483c67;
   }
 
   .token.punctuation {
-    color: #f8f8f2;
+    color: #e1e1e6;
   }
 
   .namespace {
@@ -74,7 +79,7 @@ export const PrismWrapper = styled.div`
 
   .token.boolean,
   .token.number {
-    color: #bd93f9;
+    color: #988bc7;
   }
 
   .token.selector,
@@ -83,7 +88,7 @@ export const PrismWrapper = styled.div`
   .token.char,
   .token.builtin,
   .token.inserted {
-    color: #50fa7b;
+    color: #67e480;
   }
 
   .token.operator,
@@ -92,23 +97,23 @@ export const PrismWrapper = styled.div`
   .language-css .token.string,
   .style .token.string,
   .token.variable {
-    color: #f8f8f2;
+    color: #e1e1e6;
   }
 
   .token.atrule,
   .token.attr-value,
   .token.function,
   .token.class-name {
-    color: #f1fa8c;
+    color: #e7de79;
   }
 
   .token.keyword {
-    color: #8be9fd;
+    color: #78d1e1;
   }
 
   .token.regex,
   .token.important {
-    color: #ffb86c;
+    color: #e89e64;
   }
 
   .token.important,

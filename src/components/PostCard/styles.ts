@@ -30,13 +30,13 @@ export const Container = styled.div`
 `;
 
 export const PostCardCover = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacings.small};
-  border-radius: 0.3rem;
+  height: fit-content;
+  border-radius: 5px;
   overflow: hidden;
 
   img {
-    object-fit: cover;
     transition: transform 0.5s ease-in-out;
+    border-radius: 5px;
 
     &:hover {
       transform: scale(1.2);

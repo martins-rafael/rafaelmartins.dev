@@ -1,46 +1,17 @@
-import Head from 'next/head';
 import Image from 'next/image';
 
-import { SITE_NAME, SITE_URL } from '../../config/app-config';
-
-import ParticlesBackground from '../../components/ParticlesBackground';
+import SEO from '../../components/SEO';
 import AnimationContainer from '../../components/AnimationContainer';
+import SkillsContainer from '../../components/SkillsContainer';
 
-import { Container } from './styles';
+import { WelcomeContainer, DescriptionContainer } from './styles';
 
 const HomePage = () => (
   <>
-    <Head>
-      <title>{SITE_NAME}</title>
-      <meta
-        name="description"
-        content="Desenvolvedor Frontend | ReactJS | Next.js | JavaScript | TypeScript."
-      />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={SITE_NAME} />
-      <meta
-        property="og:description"
-        content="Desenvolvedor Frontend | ReactJS | Next.js | JavaScript | TypeScript."
-      />
-      <meta property="og:url" content={SITE_URL} />
-      <meta property="og:image" content={`${SITE_URL}images/og-image.png`} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={SITE_NAME} />
-      <meta
-        name="twitter:description"
-        content="Desenvolvedor Frontend | ReactJS | Next.js | JavaScript | TypeScript."
-      />
-      <meta name="twitter:url" content={SITE_URL} />
-      <meta name="twitter:image" content={`${SITE_URL}images/og-image.png`} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="640" />
-    </Head>
+    <SEO title="Rafael Martins - Desenvolvedor Frontend" />
 
-    <ParticlesBackground />
-
-    <AnimationContainer>
-      <Container>
+    <AnimationContainer animation="appearFromAbove">
+      <WelcomeContainer>
         <div>
           <span>
             <Image
@@ -67,7 +38,57 @@ const HomePage = () => (
           height={320}
           layout="responsive"
         />
-      </Container>
+      </WelcomeContainer>
+
+      <DescriptionContainer>
+        <h2>
+          <span>&gt;</span> SOBRE
+        </h2>
+
+        <p>
+          Web developer autodidata, atualmente estou me aprofundando no
+          desenvolvimento Frontend, com foco na construção de interfaces
+          responsivas, escrevendo código limpo e eficiente. Apaixonado por
+          tecnologia, livros, games e música.
+        </p>
+
+        <p>
+          Minhas techs favoritas sâo: HTML5, CSS(SASS ❤), JavaScript e Next.js.
+        </p>
+
+        <p>
+          Você pode entrar em contato comigo através do{' '}
+          <a
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/rafaeldcmartins/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            LinkedIn
+          </a>
+          , ver o que ando desenvolvendo no{' '}
+          <a
+            title="GitHub"
+            href="https://github.com/martins-rafael"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            GitHub
+          </a>{' '}
+          e mandar um oi no{' '}
+          <a
+            title="Discord"
+            href="http://discordapp.com/users/681293490428313641"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Discord (Rafa Martins#1783)
+          </a>
+          .
+        </p>
+      </DescriptionContainer>
+
+      <SkillsContainer />
     </AnimationContainer>
   </>
 );

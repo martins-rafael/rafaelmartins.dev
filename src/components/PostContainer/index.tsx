@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Prism from 'prismjs';
 
-import { PrismWrapper } from './prism-dracula';
+import { PrismWrapper } from './prism-omni';
 import { Container } from './styles';
 
 type PostContainerProps = {

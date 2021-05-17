@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.section`
+export const WelcomeContainer = styled.section`
   ${({ theme }) => css`
-    position: absolute;
-    top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -13,6 +11,7 @@ export const Container = styled.section`
 
     @media only screen and (max-width: 768px) {
       grid-template-columns: 1fr;
+      text-align: center;
 
       > div:last-of-type {
         display: none !important;
@@ -21,6 +20,10 @@ export const Container = styled.section`
 
     @media only screen and (min-width: 1440px) {
       max-width: ${theme.spacings.containerLarge};
+    }
+
+    > div:first-of-type {
+      justify-self: center;
     }
 
     div > span {
@@ -42,6 +45,31 @@ export const Container = styled.section`
         font-weight: 700;
         text-shadow: 0 0 15px;
         color: ${theme.colors.purple};
+      }
+    }
+  `}
+`;
+
+export const DescriptionContainer = styled.section`
+  ${({ theme }) => css`
+    margin: ${theme.spacings.superLarge} 0;
+
+    h2 {
+      margin: ${theme.spacings.medium} 0;
+    }
+
+    span {
+      text-shadow: 0 0 15px;
+      color: ${theme.colors.green};
+    }
+
+    p {
+      font-size: ${theme.font.sizes.large};
+      letter-spacing: 0.069rem;
+      line-height: 1.3;
+
+      & + p {
+        margin-top: ${theme.spacings.large};
       }
     }
   `}

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { CgMenuRightAlt, CgClose } from 'react-icons/cg';
 
 import { content } from './content';
-
 import { Container, HeaderContent, LinksContainer } from './styles';
 
 const Header = () => {
@@ -16,7 +15,7 @@ const Header = () => {
     <Container>
       <HeaderContent>
         <Link href="/">
-          <a>
+          <a title="Home">
             <span>{'{'}</span>R<span>{'}'}</span>
           </a>
         </Link>
