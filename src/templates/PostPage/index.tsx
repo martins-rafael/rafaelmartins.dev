@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import { PostData } from '../../domain/posts/post';
 import { SITE_NAME } from '../../config/app-config';
 import { removeHtml } from '../../utils/remove-html';
@@ -23,9 +21,8 @@ const PostPage = ({ post }: PostPageProps) => {
         title={`${post.title} | ${SITE_NAME}`}
         description={removeHtml(post.content).slice(0, 150)}
       />
-      </Head>
 
-      <AnimationContainer>
+      <AnimationContainer animation="appearFromRight">
         <Heading>{post.title}</Heading>
         <PostDetails category={post.category.name} date={post.created_at} />
         <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
