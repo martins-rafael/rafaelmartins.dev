@@ -26,7 +26,7 @@
 ## Sobre
 
 <p align="center">
-  <img src=".github/cover.webp" alt="Home page">
+  <img src=".github/cover.png" alt="Home page">
 </p>
 
 Página pessoal com o propósito de servir como blog e portfólio, desenvolvida usando o framework [Next.js](https://nextjs.org/).
