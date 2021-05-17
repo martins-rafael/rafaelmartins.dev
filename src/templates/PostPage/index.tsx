@@ -4,6 +4,7 @@ import { PostData } from '../../domain/posts/post';
 import { SITE_NAME } from '../../config/app-config';
 import { removeHtml } from '../../utils/remove-html';
 
+import SEO from '../../components/SEO';
 import AnimationContainer from '../../components/AnimationContainer';
 import Heading from '../../components/Heading';
 import PostDetails from '../../components/PostDetails';
@@ -18,15 +19,10 @@ type PostPageProps = {
 const PostPage = ({ post }: PostPageProps) => {
   return (
     <>
-      <Head>
-        <title>
-          {post.title} | {SITE_NAME}
-        </title>
-
-        <meta
-          name="description"
-          content={removeHtml(post.content).slice(0, 150)}
-        />
+      <SEO
+        title={`${post.title} | ${SITE_NAME}`}
+        description={removeHtml(post.content).slice(0, 150)}
+      />
       </Head>
 
       <AnimationContainer>

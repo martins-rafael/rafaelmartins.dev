@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { PostData } from '../../domain/posts/post';
 import { SITE_NAME } from '../../config/app-config';
 
+import SEO from '../../components/SEO';
 import AnimationContainer from '../../components/AnimationContainer';
 import PostCard from '../../components/PostCard';
 
@@ -12,13 +13,7 @@ type BlogPageProps = {
 
 const BlogPage = ({ posts }: BlogPageProps) => (
   <>
-    <Head>
-      <title>Blog | {SITE_NAME}</title>
-      <meta
-        name="description"
-        content="Desenvolvimento web, tecnologia e afins."
-      />
-    </Head>
+      <SEO title={`Blog | ${SITE_NAME}`} />
 
     <AnimationContainer>
       {posts.map((post) => (
