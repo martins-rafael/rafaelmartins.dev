@@ -4,10 +4,6 @@ export const content = [
     url: '/',
   },
   {
-    label: 'Sobre',
-    url: '/about',
-  },
-  {
     label: 'Blog',
     url: '/blog',
   },
