@@ -30,6 +30,7 @@ export const Container = styled.div`
 `;
 
 export const PostCardCover = styled.div`
+  position: relative;
   height: fit-content;
   border-radius: 5px;
   overflow: hidden;
@@ -41,6 +42,20 @@ export const PostCardCover = styled.div`
     &:hover {
       transform: scale(1.2);
     }
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.purple};
+    border-radius: 0 0 5px 0;
+    user-select: none;
   }
 `;
 

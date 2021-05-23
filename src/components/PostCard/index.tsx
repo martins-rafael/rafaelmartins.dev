@@ -40,6 +40,7 @@ const PostCard = ({ post, effect }: PostCardProps) => {
           height={200}
           layout="responsive"
         />
+        <span>{post.category.name}</span>
       </PostCardCover>
 
       <div>
@@ -49,7 +50,7 @@ const PostCard = ({ post, effect }: PostCardProps) => {
           </a>
         </Link>
 
-        <PostDetails category={post.category.name} date={post.created_at} />
+        <PostDetails author={post.author.name} date={post.created_at} />
 
         <p>{postContent}</p>
 
