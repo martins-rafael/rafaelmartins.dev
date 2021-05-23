@@ -7,6 +7,7 @@ import { ProjectData } from '../../domain/projects/project';
 
 import SEO from '../../components/SEO';
 import AnimationContainer from '../../components/AnimationContainer';
+import ImageContainer from '../../components/ImageContainer';
 
 import { Container, ProjectContainer } from './styles';
 
@@ -33,14 +34,16 @@ const ProjectsPage = ({ projects }: ProjectsPageProps) => {
           <section>
             {projects.map((post, index) => (
               <ProjectContainer data-aos="fade-down" key={index}>
-                <img
+                <ImageContainer
                   style={{ gridColumn: (index % 2 ? 2 : 1) + ' / span 2' }}
-                  src={post.cover.formats.large.url}
-                  alt={post.projectTitle}
+                  url={post.cover.formats.large.url}
+                  alt={post.title}
+                  width={572}
+                  height={400}
                 />
 
                 <div style={{ gridColumn: index % 2 ? 1 : 3 }}>
-                  <h3>{post.projectTitle}</h3>
+                  <h3>{post.title}</h3>
 
                   <p>{post.description}</p>
 

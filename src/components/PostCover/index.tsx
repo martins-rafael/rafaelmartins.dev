@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ImageContainer from '../ImageContainer';
 import { Container } from './styles';
 
 type PostCoverProps = {
@@ -8,13 +8,7 @@ type PostCoverProps = {
 
 const PostCover = ({ coverUrl, alt }: PostCoverProps) => (
   <Container>
-    <Image
-      src={coverUrl}
-      alt={alt}
-      width={960}
-      height={540}
-      layout="responsive"
-    />
+    <ImageContainer url={coverUrl} alt={alt} width={960} height={540} />
   </Container>
 );
 

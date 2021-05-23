@@ -29,22 +29,8 @@ export const Container = styled.div`
   `}
 `;
 
-export const PostCardCover = styled.div`
-  position: relative;
-  height: fit-content;
-  border-radius: 5px;
-  overflow: hidden;
-
-  img {
-    transition: transform 0.5s ease-in-out;
-    border-radius: 5px;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-
-  span {
+export const CategoryBadge = styled.span`
+  ${({ theme }) => css`
     position: absolute;
     top: 0;
     left: 0;
@@ -52,11 +38,11 @@ export const PostCardCover = styled.div`
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.background};
-    background: ${({ theme }) => theme.colors.purple};
+    color: ${theme.colors.background};
+    background: ${theme.colors.purple};
     border-radius: 0 0 5px 0;
     user-select: none;
-  }
+  `}
 `;
 
 export const PostCardHeading = styled.h2`
