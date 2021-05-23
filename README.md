@@ -41,7 +41,7 @@ Página pessoal com o propósito de servir como blog e portfólio, desenvolvida 
 - [X] Blog integrado.
 - [X] Markdown highlighting.
 - [X] Scroll to top.
-- [X] API do blog gerada com Strapi CMS.
+- [X] API gerada com Strapi CMS.
 - [X] Animações de transição entre as páginas e de scroll.
 - [X] Provedor de imagens by Cloudinary.
 - [X] Lazy loading p/ otimizar o desempenho das imagens.
@@ -87,7 +87,7 @@ Abra [http://localhost:3000](http://localhost:3000) em seu navegador para ver o 
 
 ## Deploy on Vercel
 
-[Click aqui](rafaelmartins.vercel.app) para ver a live preview deste projeto.
+[Click aqui](https://rafaelmartins.dev/) para ver a live preview deste projeto.
 
 <br>
 

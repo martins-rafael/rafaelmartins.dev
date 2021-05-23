@@ -69,7 +69,10 @@ export const PrismWrapper = styled.div`
     opacity: 0.7;
   }
 
-  .token.property,
+  .token.property {
+    color: #988bc7;
+  }
+
   .token.tag,
   .token.constant,
   .token.symbol,
@@ -79,19 +82,29 @@ export const PrismWrapper = styled.div`
 
   .token.boolean,
   .token.number {
-    color: #988bc7;
+    color: #78d1e1;
   }
 
-  .token.selector,
-  .token.attr-name,
   .token.string,
+  .token.attr-value {
+    color: #e7de79;
+  }
+
+  .token.attr-name,
   .token.char,
   .token.builtin,
   .token.inserted {
     color: #67e480;
   }
 
-  .token.operator,
+  .token.selector {
+    color: #67e480;
+  }
+
+  .token.operator {
+    color: #ff79c6;
+  }
+
   .token.entity,
   .token.url,
   .language-css .token.string,
@@ -100,15 +113,28 @@ export const PrismWrapper = styled.div`
     color: #e1e1e6;
   }
 
-  .token.atrule,
-  .token.attr-value,
-  .token.function,
+  .token.function {
+    color: #ff79c6;
+  }
+
+  .token.parameter {
+    color: #e89e64;
+  }
+
+  .token.rule {
+    color: #ff79c6;
+  }
+
+  .token.atrule {
+    color: #78d1e1;
+  }
+
   .token.class-name {
-    color: #e7de79;
+    color: #988bc7;
   }
 
   .token.keyword {
-    color: #78d1e1;
+    color: #ff79c6;
   }
 
   .token.regex,

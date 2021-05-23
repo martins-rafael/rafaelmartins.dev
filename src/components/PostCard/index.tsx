@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { removeHtml } from '../../utils/remove-html';
 
 import PostDetails from '../PostDetails';
+import ImageContainer from '../ImageContainer';
 
-import { Container, PostCardCover, PostCardHeading } from './styles';
+import { Container, CategoryBadge, PostCardHeading } from './styles';
 
 type PostCardProps = {
   post: {
@@ -32,15 +32,14 @@ const PostCard = ({ post, effect }: PostCardProps) => {
 
   return (
     <Container data-aos={effect}>
-      <PostCardCover>
-        <Image
-          src={post.cover.formats.small.url}
-          alt={post.title}
-          width={280}
-          height={200}
-          layout="responsive"
-        />
-      </PostCardCover>
+      <ImageContainer
+        url={post.cover.formats.small.url}
+        alt={post.title}
+        width={280}
+        height={200}
+      >
+        <CategoryBadge>{post.category.name}</CategoryBadge>
+      </ImageContainer>
 
       <div>
         <Link href="/post/[slug]" as={`/post/${post.slug}`}>
@@ -49,7 +48,7 @@ const PostCard = ({ post, effect }: PostCardProps) => {
           </a>
         </Link>
 
-        <PostDetails category={post.category.name} date={post.created_at} />
+        <PostDetails author={post.author.name} date={post.created_at} />
 
         <p>{postContent}</p>
 
