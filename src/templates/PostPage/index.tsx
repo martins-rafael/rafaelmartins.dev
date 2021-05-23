@@ -24,7 +24,7 @@ const PostPage = ({ post }: PostPageProps) => {
 
       <AnimationContainer animation="appearFromRight">
         <Heading>{post.title}</Heading>
-        <PostDetails category={post.category.name} date={post.created_at} />
+        <PostDetails author={post.author.name} date={post.created_at} />
         <PostCover coverUrl={post.cover.formats.large.url} alt={post.title} />
         <PostContainer content={post.content} />
         <Comments slug={post.slug} title={post.title} />

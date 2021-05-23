@@ -3,14 +3,18 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { SITE_NAME } from '../../config/app-config';
+import { ProjectData } from '../../domain/projects/project';
 
 import SEO from '../../components/SEO';
 import AnimationContainer from '../../components/AnimationContainer';
 
-import { projects } from './content';
 import { Container, ProjectContainer } from './styles';
 
-const ProjectsPage = () => {
+type ProjectsPageProps = {
+  projects: ProjectData[];
+};
+
+const ProjectsPage = ({ projects }: ProjectsPageProps) => {
   useEffect(() => {
     AOS.init({ duration: 700 });
   }, []);
@@ -27,40 +31,44 @@ const ProjectsPage = () => {
           </h2>
 
           <section>
-            {projects.map(
-              ({ cover, title, description, techs, url }, index) => (
-                <ProjectContainer data-aos="fade-down" key={index}>
-                  <img
-                    style={{ gridColumn: (index % 2 ? 2 : 1) + ' / span 2' }}
-                    src={cover}
-                    alt={title}
-                  />
+            {projects.map((post, index) => (
+              <ProjectContainer data-aos="fade-down" key={index}>
+                <img
+                  style={{ gridColumn: (index % 2 ? 2 : 1) + ' / span 2' }}
+                  src={post.cover.formats.large.url}
+                  alt={post.projectTitle}
+                />
 
-                  <div style={{ gridColumn: index % 2 ? 1 : 3 }}>
-                    <h3>{title}</h3>
+                <div style={{ gridColumn: index % 2 ? 1 : 3 }}>
+                  <h3>{post.projectTitle}</h3>
 
-                    <p>{description}</p>
+                  <p>{post.description}</p>
 
-                    <ul>
-                      {techs.map((tech) => (
-                        <li key={tech}>
-                          <span>&gt;</span> {tech}
-                        </li>
-                      ))}
-                    </ul>
+                  <ul>
+                    <li>
+                      <span>&gt;</span> {post.feats01}
+                    </li>
 
-                    <a
-                      title="Ir para o repositório"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href={url}
-                    >
-                      Ver no GitHub
-                    </a>
-                  </div>
-                </ProjectContainer>
-              ),
-            )}
+                    <li>
+                      <span>&gt;</span> {post.feats02}
+                    </li>
+
+                    <li>
+                      <span>&gt;</span> {post.feats03}
+                    </li>
+                  </ul>
+
+                  <a
+                    title="Ir para o repositório"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    href={post.url}
+                  >
+                    Ver no GitHub
+                  </a>
+                </div>
+              </ProjectContainer>
+            ))}
 
             <a
               title="Ir para o GitHub"
