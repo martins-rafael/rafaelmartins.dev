@@ -34,7 +34,7 @@ export type ProjectCover = ProjectCoverFormat & {
 
 export type ProjectData = {
   id: number;
-  projectTitle: string;
+  title: string;
   description: string;
   feats01: string;
   feats02: string;
