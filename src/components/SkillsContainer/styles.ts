@@ -51,6 +51,7 @@ export const Container = styled.section`
           border-radius: 5px 5px 0 0;
           opacity: 0;
           cursor: default;
+          user-select: none;
           transition: opacity 0.3s ease-in-out;
         }
 
