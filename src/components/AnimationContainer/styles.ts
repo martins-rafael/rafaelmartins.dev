@@ -51,4 +51,7 @@ const animations = {
 
 export const Container = styled.div<ContainerProps>`
   animation: ${({ animationName }) => animations[animationName]} 1s;
+  @media only screen and (max-width: 768px) {
+    animation: ${animations.appearFromAbove} 1s;
+  }
 `;
