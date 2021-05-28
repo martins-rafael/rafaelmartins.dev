@@ -14,13 +14,10 @@ export const Container = styled.section`
     }
 
     p {
+      margin-top: ${theme.spacings.large};
       font-size: ${theme.font.sizes.large};
       letter-spacing: 0.069rem;
       line-height: 1.3;
-
-      & + p {
-        margin-top: ${theme.spacings.large};
-      }
     }
   `}
 `;

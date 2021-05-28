@@ -14,7 +14,7 @@ const AboutContainer = ({ data, children }: AboutContainerProps) => {
       <h2>
         <span>&gt;</span> {about.title}
       </h2>
-      <p dangerouslySetInnerHTML={{ __html: about.content }} />
+      <div dangerouslySetInnerHTML={{ __html: about.content }} />
       {children}
     </Container>
   );
