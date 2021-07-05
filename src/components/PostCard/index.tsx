@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { removeHtml } from '../../utils/remove-html';
 
 import PostDetails from '../PostDetails';
 import ImageContainer from '../ImageContainer';
@@ -26,9 +25,7 @@ type PostCardProps = {
 };
 
 const PostCard = ({ post, effect }: PostCardProps) => {
-  const postContent = `${removeHtml(post.content)
-    .slice(0, 180)
-    .replace(/#/g, '')}... `;
+  const introduction = `${post.content.split('.')[0]}.`;
 
   return (
     <Container data-aos={effect}>
@@ -50,7 +47,7 @@ const PostCard = ({ post, effect }: PostCardProps) => {
 
         <PostDetails author={post.author.name} date={post.created_at} />
 
-        <p>{postContent}</p>
+        <p>{introduction}</p>
 
         <Link href="/post/[slug]" as={`/post/${post.slug}`}>
           <a>Continue lendo »</a>
