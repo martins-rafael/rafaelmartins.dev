@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.article`
+  h2,
   h3 {
     margin-top: 5rem;
   }
