@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: 25rem 1fr;
+    grid-template-columns: 28rem 1fr;
     gap: 1.5rem;
 
     @media only screen and (max-width: 768px) {

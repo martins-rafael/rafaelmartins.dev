@@ -33,7 +33,7 @@ const PostCard = ({ post, effect }: PostCardProps) => {
         url={post.cover.formats.small.url}
         alt={post.title}
         width={280}
-        height={200}
+        height={157}
       >
         <CategoryBadge>{post.category.name}</CategoryBadge>
       </ImageContainer>
