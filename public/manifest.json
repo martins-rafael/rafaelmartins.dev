@@ -1,0 +1,21 @@
+{
+  "name": "Rafael Martins Portfólio",
+  "short_name": "Rafael Martins Portfólio",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#121214",
+  "description": "Página pessoal com o propósito de servir como blog e portfólio.",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#121214"
+}
