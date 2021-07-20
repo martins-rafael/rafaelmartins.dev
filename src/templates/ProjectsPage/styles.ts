@@ -72,15 +72,14 @@ export const ProjectContainer = styled.div`
 
       h3 {
         position: relative;
-        margin-left: 16px;
 
         &::before {
           content: '';
           position: absolute;
-          top: 0;
-          left: -16px;
-          width: 4px;
-          height: 100%;
+          bottom: -10px;
+          left: 0;
+          width: 25px;
+          height: 4px;
           background: ${theme.colors.purple};
           border-radius: 2px;
           box-shadow: 0 0 10px ${theme.colors.purple};
@@ -92,7 +91,7 @@ export const ProjectContainer = styled.div`
       }
 
       ul li {
-        margin: 0 ${theme.spacings.small} ${theme.spacings.extraSmall};
+        margin-bottom: ${theme.spacings.extraSmall};
         list-style: none;
 
         span {
