@@ -16,7 +16,7 @@ export const PrismWrapper = styled.div`
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-family: Consolas, Monaco, 'Andale Mono', 'Courier New', Courier,
       'Ubuntu Mono', monospace;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -32,14 +32,22 @@ export const PrismWrapper = styled.div`
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 
   /* Code blocks */
   pre[class*='language-'] {
-    padding: 1em;
+    padding: 2em;
     margin: 0.5em 0;
     overflow: auto;
     border-radius: 5px;
+
+    @media only screen and (max-width: 768px) {
+      padding: 1em;
+    }
   }
 
   :not(pre) > code[class*='language-'],
@@ -133,12 +141,12 @@ export const PrismWrapper = styled.div`
     color: #988bc7;
   }
 
-  .token.keyword {
+  .token.keyword,
+  .token.important {
     color: #ff79c6;
   }
 
-  .token.regex,
-  .token.important {
+  .token.regex {
     color: #e89e64;
   }
 
