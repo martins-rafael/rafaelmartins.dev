@@ -13,7 +13,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy:static": "next build && next export"
+    "deploy:static": "next build && next export",
+    "lint": "eslint src --max-warnings=0",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix"
+    ]
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -44,6 +51,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }
