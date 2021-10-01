@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => css`
     display: flex;
-    margin: ${theme.spacings.extraSmall} 0 ${theme.spacings.small};
+    margin: ${theme.spacings.small} 0 ${theme.spacings.medium};
     font-size: 1.6rem;
     color: #999999cc;
 
