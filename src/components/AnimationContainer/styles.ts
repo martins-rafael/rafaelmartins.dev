@@ -5,7 +5,8 @@ interface ContainerProps {
     | 'fadeIn'
     | 'appearFromLeft'
     | 'appearFromRight'
-    | 'appearFromAbove';
+    | 'appearFromAbove'
+    | 'appearFromBelow';
 }
 
 const animations = {
@@ -45,13 +46,23 @@ const animations = {
   to {
     opacity: 1;
     transform: translateY(0);
+  },
+`,
+  appearFromBelow: keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  },
 `,
 };
 
 export const Container = styled.div<ContainerProps>`
   animation: ${({ animationName }) => animations[animationName]} 1s;
   @media only screen and (max-width: 768px) {
-    animation: ${animations.appearFromAbove} 1s;
+    animation: ${animations.appearFromBelow} 1s;
   }
 `;

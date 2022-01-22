@@ -1,4 +1,4 @@
-export const API_URL = 'https://protected-eyrie-31544.herokuapp.com';
+export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const WELCOME_URL = `${API_URL}/welcome`;
 export const CONTACT_URL = `${API_URL}/contact`;

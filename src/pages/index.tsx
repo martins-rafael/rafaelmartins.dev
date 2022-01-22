@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 
-import { getData } from '../data/home/get-data';
-import { HomeData } from '../domain/home/home';
+import { getData } from 'data/home';
+import { HomeData } from 'types/home';
 
-import HomePage from '../templates/HomePage';
+import HomeTemplate from 'templates/Home';
 
 type HomeProps = {
   data: HomeData;
@@ -17,6 +17,6 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home = ({ data }: HomeProps) => <HomePage data={data} />;
+const Home = ({ data }: HomeProps) => <HomeTemplate data={data} />;
 
 export default Home;

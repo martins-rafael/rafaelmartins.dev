@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 
-import { getAllProjects } from '../data/projects/get-all-projects';
-import { ProjectData } from '../domain/projects/project';
+import { getAllProjects } from 'data/projects';
+import { ProjectData } from 'types/project';
 
-import ProjectsPage from '../templates/ProjectsPage';
+import ProjectsTemplate from 'templates/Projects';
 
 type ProjectsProps = {
   projects: ProjectData[];
@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Projects = ({ projects }: ProjectsProps) => (
-  <ProjectsPage projects={projects} />
+  <ProjectsTemplate projects={projects} />
 );
 
 export default Projects;
