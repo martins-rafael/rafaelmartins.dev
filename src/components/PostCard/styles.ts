@@ -2,46 +2,21 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    display: grid;
-    grid-template-columns: 28rem 1fr;
-    gap: 1.5rem;
-
-    @media only screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-
-    a {
-      &:last-child {
-        margin: ${theme.spacings.small} 0;
-        font-size: ${theme.font.sizes.small};
-        font-style: italic;
-        font-weight: bold;
-      }
+    a:hover {
+      text-shadow: initial;
     }
 
     p {
+      margin-top: auto;
       line-height: 1.3;
+      color: ${theme.colors.text};
     }
 
     & + div {
       margin-top: ${theme.spacings.superLarge};
+      padding-top: ${theme.spacings.superLarge};
+      border-top: 1px solid #222222cc;
     }
-  `}
-`;
-
-export const CategoryBadge = styled.span`
-  ${({ theme }) => css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 5px 10px;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: ${theme.colors.background};
-    background: ${theme.colors.purple};
-    border-radius: 0 0 5px 0;
-    user-select: none;
   `}
 `;
 

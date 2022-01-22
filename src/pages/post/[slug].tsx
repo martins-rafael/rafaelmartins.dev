@@ -1,13 +1,13 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-import { PostData } from '../../domain/posts/post';
-import { countAllPosts } from '../../data/posts/count-all-posts';
-import { getAllPosts } from '../../data/posts/get-all-posts';
-import { getPost } from '../../data/posts/get-post';
+import { PostData } from 'types/post';
+import { countAllPosts } from 'data/posts';
+import { getAllPosts } from 'data/posts';
+import { getPost } from 'data/posts';
 
-import PostPage from '../../templates/PostPage';
+import PostTemplate from 'templates/Post';
 
-type DynamicPostProps = {
+type PostProps = {
   post: PostData;
 };
 
@@ -15,20 +15,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = await countAllPosts();
   const posts = await getAllPosts(`_limit=${numberOfPosts}`);
 
-  return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const posts = await getPost(context.params.slug);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const posts = await getPost(params.slug);
 
   return {
     props: { post: posts[0] },
@@ -36,6 +31,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const DynamicPost = ({ post }: DynamicPostProps) => <PostPage post={post} />;
+const Post = ({ post }: PostProps) => <PostTemplate post={post} />;
 
-export default DynamicPost;
+export default Post;

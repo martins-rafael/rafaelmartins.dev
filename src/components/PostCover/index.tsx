@@ -1,4 +1,4 @@
-import ImageContainer from '../ImageContainer';
+import ImageContainer from 'components/ImageContainer';
 import { Container } from './styles';
 
 type PostCoverProps = {

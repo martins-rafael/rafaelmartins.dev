@@ -43,7 +43,7 @@ export const PrismWrapper = styled.div`
     padding: 2em;
     margin: 0.5em 0;
     overflow: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 
     @media only screen and (max-width: 768px) {
       padding: 1em;
@@ -58,7 +58,7 @@ export const PrismWrapper = styled.div`
   /* Inline code */
   :not(pre) > code[class*='language-'] {
     padding: 0.1em;
-    border-radius: 5px;
+    border-radius: 10px;
     white-space: normal;
   }
 

@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 
-import { getAllPosts } from '../data/posts/get-all-posts';
-import { PostData } from '../domain/posts/post';
+import { getAllPosts } from 'data/posts';
+import { PostData } from 'types/post';
 
-import BlogPage from '../templates/BlogPage';
+import BlogTemplate from 'templates/Blog';
 
 type BlogProps = {
   posts: PostData[];
@@ -18,6 +18,6 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = ({ posts }: BlogProps) => <BlogPage posts={posts} />;
+const Blog = ({ posts }: BlogProps) => <BlogTemplate posts={posts} />;
 
 export default Blog;

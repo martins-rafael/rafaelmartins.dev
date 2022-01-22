@@ -3,11 +3,12 @@ import { SiLinkedin } from 'react-icons/si';
 import { FiMail } from 'react-icons/fi';
 import { IoIosArrowUp } from 'react-icons/io';
 
-import { SITE_NAME } from '../../config/app-config';
+import { SITE_NAME } from 'config/app-config';
 
 import { Container } from './styles';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -15,7 +16,7 @@ const Footer = () => {
   return (
     <Container>
       <div>
-        © 2021 - Feito com 💜 by <span>{SITE_NAME}</span>
+        © {year} - Feito com 💜 by <span>{SITE_NAME}</span>
       </div>
 
       <div>

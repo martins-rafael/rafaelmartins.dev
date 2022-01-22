@@ -7,7 +7,6 @@ type ImageContainerProps = {
   width: number;
   height: number;
   style?: React.CSSProperties;
-  children?: React.ReactNode;
 };
 
 const ImageContainer = ({
@@ -16,7 +15,6 @@ const ImageContainer = ({
   width,
   height,
   style,
-  children,
 }: ImageContainerProps) => (
   <Container style={{ paddingTop: `${(height / width) * 100}%`, ...style }}>
     <div>
@@ -27,7 +25,6 @@ const ImageContainer = ({
         height={height}
         layout="responsive"
       />
-      {children}
     </div>
   </Container>
 );

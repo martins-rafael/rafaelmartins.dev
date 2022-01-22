@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { SITE_NAME, SITE_URL } from '../../config/app-config';
+import { SITE_NAME, SITE_URL } from 'config/app-config';
 
 interface SEOProps {
   title: string;
@@ -16,6 +16,10 @@ const SEO = ({ title, description }: SEOProps) => {
           description ||
           'Desenvolvedor Frontend | ReactJS | Next.js | JavaScript | TypeScript.'
         }
+      />
+      <meta
+        name="keywords"
+        content="desenvolvedor, web, dev, desenvolvimento, frontend, rafael martins, programador, front-end, website, portfólio, reactjs, nextjs, javascript, typescript"
       />
 
       <meta property="og:site_name" content={SITE_NAME} />

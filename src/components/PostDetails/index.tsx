@@ -1,22 +1,38 @@
-import { BsCalendar, BsFillPersonFill } from 'react-icons/bs';
-import Date from '../Date';
+import {
+  BsCalendar,
+  BsFillPersonFill,
+  BsFillCollectionFill,
+} from 'react-icons/bs';
+import { formatDate } from 'utils/formatDate';
 import { Container } from './styles';
 
 type PostDetailsProps = {
   date: string;
   author: string;
+  category: string;
 };
 
-const PostDetails = ({ date, author }: PostDetailsProps) => (
-  <Container>
-    <div>
-      <BsCalendar size={18} /> <Date date={date} />
-    </div>
+const PostDetails = ({ date, author, category }: PostDetailsProps) => {
+  const postDate = formatDate(date);
 
-    <div>
-      <BsFillPersonFill size={18} /> {author}
-    </div>
-  </Container>
-);
+  return (
+    <Container>
+      <div>
+        <BsCalendar size={18} />
+        <span>{postDate}</span>
+      </div>
+
+      <div>
+        <BsFillPersonFill size={18} />
+        {author}
+      </div>
+
+      <div>
+        <BsFillCollectionFill size={18} />
+        {category}
+      </div>
+    </Container>
+  );
+};
 
 export default PostDetails;

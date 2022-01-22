@@ -9,7 +9,7 @@ export const Container = styled.article`
 
     img {
       max-width: 100%;
-      border-radius: 5px;
+      border-radius: 10px;
     }
 
     p {
@@ -24,7 +24,7 @@ export const Container = styled.article`
         font-size: 1.4rem;
         color: #e1e1e6;
         background: #191622;
-        border-radius: 5px;
+        border-radius: 10px;
       }
     }
 
@@ -34,9 +34,11 @@ export const Container = styled.article`
     }
 
     blockquote {
-      border-left: 5px solid ${theme.colors.purple};
-      padding: 0px ${theme.spacings.medium};
+      padding: 1rem ${theme.spacings.medium};
       margin: ${theme.spacings.large} auto;
+      background: #191622;
+      border-left: 5px solid ${theme.colors.purple};
+      border-radius: 0 10px 10px 0;
     }
   `}
 `;

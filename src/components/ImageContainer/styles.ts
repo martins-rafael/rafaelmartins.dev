@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   position: relative;
   height: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   background: #99999911;
   background-position: center center;
@@ -18,7 +18,7 @@ export const Container = styled.div`
 
   img {
     transition: transform 0.5s ease-in-out;
-    border-radius: 5px;
+    border-radius: 10px;
 
     &:hover {
       transform: scale(1.2);

@@ -1,4 +1,4 @@
-import { HomeContact } from '../../domain/home/home';
+import { HomeContact } from 'types/home';
 
 type ContactProps = {
   data: HomeContact;

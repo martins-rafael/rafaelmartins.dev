@@ -5,11 +5,12 @@ export const Container = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto auto 0;
-    padding: ${theme.spacings.large} 1.6rem;
+    margin: ${theme.spacings.superLarge} auto 0;
+    padding: ${theme.spacings.small} 1.6rem ${theme.spacings.large};
     width: 100%;
     max-width: ${theme.spacings.container};
     color: ${theme.colors.gray};
+    border-top: 1px solid #222222cc;
 
     span {
       font-weight: 700;
@@ -32,13 +33,15 @@ export const Container = styled.footer`
 
         &:hover {
           border-color: ${theme.colors.green};
-          box-shadow: 0 0 5px ${theme.colors.green};
+          box-shadow: 0 0 0 2px ${theme.colors.background},
+            0 0 0 4px ${theme.colors.green}, 0 0 15px ${theme.colors.green};
         }
       }
 
       &:hover {
         border-color: ${theme.colors.purple};
-        box-shadow: 0 0 5px ${theme.colors.purple};
+        box-shadow: 0 0 0 2px ${theme.colors.background},
+          0 0 0 4px ${theme.colors.purple}, 0 0 15px ${theme.colors.purple};
       }
     }
 

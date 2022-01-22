@@ -38,7 +38,6 @@ export const HeaderContent = styled.nav`
 
     a {
       font-weight: bold;
-      letter-spacing: 0.069rem;
       text-transform: uppercase;
       color: ${theme.colors.title};
     }
@@ -92,12 +91,12 @@ export const LinksContainer = styled.ul<LinksContainerProps>`
       &::after {
         position: absolute;
         left: 0;
-        bottom: -8px;
+        bottom: -10px;
         content: '';
         width: 0;
         height: 4px;
         background-color: ${theme.colors.green};
-        border-radius: 2px;
+        border-radius: 4px;
         box-shadow: 0 0 10px ${theme.colors.green};
       }
 

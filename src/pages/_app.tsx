@@ -1,9 +1,10 @@
 import { AppProps } from 'next/app';
 
+import BaseTemplate from 'templates/Base';
+
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../styles/theme';
-import { GlobalStyles } from '../styles/global-styles';
-import BaseTemplate from '../templates/BaseTemplate';
+import { theme } from 'styles/theme';
+import { GlobalStyles } from 'styles/global';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

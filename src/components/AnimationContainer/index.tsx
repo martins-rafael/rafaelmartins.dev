@@ -1,13 +1,14 @@
 import { Container } from './styles';
 
-interface AnimationContainerProps {
+type AnimationContainerProps = {
   animation:
     | 'fadeIn'
     | 'appearFromLeft'
     | 'appearFromRight'
-    | 'appearFromAbove';
+    | 'appearFromAbove'
+    | 'appearFromBelow';
   children: React.ReactNode;
-}
+};
 
 const AnimationContainer = ({
   children,

@@ -1,58 +1,31 @@
 import Link from 'next/link';
 
-import PostDetails from '../PostDetails';
-import ImageContainer from '../ImageContainer';
+import { PostData } from 'types/post';
+import PostDetails from 'components/PostDetails';
 
-import { Container, CategoryBadge, PostCardHeading } from './styles';
+import { Container, PostCardHeading } from './styles';
 
 type PostCardProps = {
-  post: {
-    slug: string;
-    title: string;
-    author: { name: string };
-    category: { name: string };
-    created_at: string;
-    content: string;
-    cover: {
-      formats: {
-        small: {
-          url: string;
-        };
-      };
-    };
-  };
+  post: PostData;
   effect: string;
 };
 
 const PostCard = ({ post, effect }: PostCardProps) => {
-  const introduction = `${post.content.split('.')[0]}.`;
-
   return (
     <Container data-aos={effect}>
-      <ImageContainer
-        url={post.cover.formats.small.url}
-        alt={post.title}
-        width={280}
-        height={157}
-      >
-        <CategoryBadge>{post.category.name}</CategoryBadge>
-      </ImageContainer>
+      <Link href="/post/[slug]" as={`/post/${post.slug}`}>
+        <a>
+          <PostCardHeading>{post.title}</PostCardHeading>
 
-      <div>
-        <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-          <a>
-            <PostCardHeading>{post.title}</PostCardHeading>
-          </a>
-        </Link>
+          <PostDetails
+            author={post.author.name}
+            date={post.created_at}
+            category={post.category.name}
+          />
 
-        <PostDetails author={post.author.name} date={post.created_at} />
-
-        <p>{introduction}</p>
-
-        <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-          <a>Continue lendo »</a>
-        </Link>
-      </div>
+          <p>{post.subtitle}</p>
+        </a>
+      </Link>
     </Container>
   );
 };
