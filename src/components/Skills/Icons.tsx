@@ -5,12 +5,12 @@ import {
   SiSass as Sass,
   SiReact as React,
   SiNextDotJs as Next,
+  SiTailwindcss as Tailwind,
   SiTypescript as Typescript,
   SiNodeDotJs as Node,
   SiPostgresql as Postgresql,
   SiGit as Git,
   SiGithub as Github,
-  SiLinux as Linux,
 } from 'react-icons/si';
 
 export const icons = {
@@ -20,10 +20,10 @@ export const icons = {
   Sass,
   React,
   Next,
+  Tailwind,
   Typescript,
   Node,
   Postgresql,
   Git,
   Github,
-  Linux,
 };

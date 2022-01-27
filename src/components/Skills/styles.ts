@@ -59,7 +59,7 @@ export const Container = styled.section`
         &:hover {
           border-color: ${theme.colors.purple};
           box-shadow: 0 0 0 4px ${theme.colors.background},
-            0 0 0 8px ${theme.colors.purple}, 0 0 20px ${theme.colors.purple};
+            0 0 0 8px ${theme.colors.purple}, 0 0 35px ${theme.colors.purple};
 
           svg {
             color: #222222;
