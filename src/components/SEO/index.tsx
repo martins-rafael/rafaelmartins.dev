@@ -4,9 +4,10 @@ import { SITE_NAME, SITE_URL } from 'config/app-config';
 interface SEOProps {
   title: string;
   description?: string;
+  imageUrl?: string;
 }
 
-const SEO = ({ title, description }: SEOProps) => {
+const SEO = ({ title, description, imageUrl }: SEOProps) => {
   return (
     <Head>
       <title>{title}</title>
@@ -33,7 +34,10 @@ const SEO = ({ title, description }: SEOProps) => {
         }
       />
       <meta property="og:url" content={SITE_URL} />
-      <meta property="og:image" content={`${SITE_URL}images/og-image.png`} />
+      <meta
+        property="og:image"
+        content={imageUrl || `${SITE_URL}images/og-image.png`}
+      />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -45,9 +49,12 @@ const SEO = ({ title, description }: SEOProps) => {
         }
       />
       <meta name="twitter:url" content={SITE_URL} />
-      <meta name="twitter:image" content={`${SITE_URL}images/og-image.png`} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="640" />
+      <meta
+        name="twitter:image"
+        content={imageUrl || `${SITE_URL}images/og-image.png`}
+      />
+      <meta property="og:image:width" content="1280" />
+      <meta property="og:image:height" content="720" />
     </Head>
   );
 };

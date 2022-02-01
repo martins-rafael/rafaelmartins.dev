@@ -20,6 +20,7 @@ const PostTemplate = ({ post }: PostTemplateProps) => {
       <SEO
         title={`${post.title} | ${SITE_NAME}`}
         description={removeHtml(post.content).slice(0, 150)}
+        imageUrl={post.cover.formats.large.url}
       />
 
       <AnimationContainer animation="appearFromRight">
