@@ -5,7 +5,6 @@ export const Container = styled.div`
   height: 0;
   border-radius: 10px;
   overflow: hidden;
-  background: #99999911;
   background-position: center center;
   background-size: 100%;
 
