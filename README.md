@@ -62,7 +62,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 - [AOS](https://michalsnik.github.io/aos/)
 - [Prism.js](https://prismjs.com/)
 - [remark](https://remark.js.org/)
-- [disqus-react](https://www.npmjs.com/package/disqus-react)
+- [NProgress](https://github.com/apal21/nextjs-progressbar)
 - [Strapi CMS](https://strapi.io/)
 - [Vercel](https://vercel.com/dashboard)
 - [Heroku](https://www.heroku.com/)
